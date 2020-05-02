@@ -1,0 +1,33 @@
+<!--pages/scenicDetail/scenicDetail.wxml-->
+<view class="page" bindtouchstart="bgTouchStart" bindtouchmove="bgTouchMove" bindtouchend="bgTouchEnd" data-imgw="{{bgimgw}}" data-imgwh="{{bgimgh}}" style="height:{{winHeight}}px;background-image:url({{bgImg}});background-size:{{bgimgw}} {{bgimgh}};background-position-x:{{bgpsx}};background-position-y:{{bgpsy}};">
+  <view class="content">
+    <!-- 悬浮框 -->
+    <view class="suspensionDetail">
+        <view class="detailWrap" hidden="{{showModelHidden}}">
+          <view class="detailWrapTop">
+            <view class="detailWrapTopR">
+              <image src="{{imgsrc}}"></image>
+              <view class="coverImg" bindtap="playVideImg">
+                <image src="/style/images/play.png" style="width:24px;height:24px;margin: 28px auto"></image></view>
+            </view>
+            <view class="detailWrapTopL">
+              <text class="tit">{{adreess_name}}</text>
+              <text class="dec">{{adress_descript}}</text>
+            </view>
+          </view>
+          <view class="detailWrapBm">
+              <view class="detailTime">
+                <text style="border-bottom:1px solid #999;margin-bottom:6px;margin-top:17px">景区地址: {{current_adress}}</text>
+                <text>开放时间: </text>
+              </view>
+              <button bindtap="closeModel">关闭</button>
+          </view>
+        </view>
+        <!-- 当弹框关闭后,这个按钮显示 -->
+        <view class="showModelBtn" hidden="{{showHidden}}" bindtap="openModel">打开</view>
+        <!-- 当弹框关闭后,这个按钮显示结束 -->
+
+    </view>
+    <!-- 悬浮框结束 -->
+  </view>
+</view>

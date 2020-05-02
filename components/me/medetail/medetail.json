@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "mp-cells": "../../../example/cells/cells",
+    "mp-cell": "../../../example/cell/cell",
+    "mp-badge": "../../../example/badge/badge",
+    "mp-form": "../../../example/form/form"
+  },
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "个人信息",
+    "navigationBarBackgroundColor": "#85A8E8",
+    "backgroundColor": "#FFF"
+  }
+}

@@ -1,0 +1,12 @@
+<!-- camera.wxml -->
+<camera device-position="back" flash="off" binderror="error" style="width: 100%; height:{{height}}px;"></camera>
+
+<!-- 用于页面渲染动画 -->
+
+<view class="card" wx:if="{{distinguish == true}}">
+  <image src="https://risi.wuyiyizhan.com/attachment/images/38/2020/04/RH2e1c028kPGVqDe5mOk0e5KG20meo.gif"></image>
+</view>
+
+<!-- <view style="position:absolute;bottom:20px;right:0;left:0;">
+  <button>点击</button>
+</view> -->

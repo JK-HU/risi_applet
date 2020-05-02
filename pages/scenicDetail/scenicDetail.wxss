@@ -1,0 +1,27 @@
+/* pages/scenicDetail/scenicDetail.wxss */
+.page{width: 100%;height: 100%;background: #eee;background-position: bottom center;background-repeat: no-repeat;overflow-y: hidden}
+.content{width: 100%;height: 100%;overflow: scroll}
+.content .suspensionDetail{position: relative;width: 100%;height: 100%;z-index: 999}
+.content .suspensionDetail .detailWrap{position: fixed;top: 10px;width: 95%;height: 263px;margin: 0 auto;right: 0;left: 0;bottom: 0;background-color: rgba(253, 253, 253, 0.767);border-radius: 8px}
+.content .suspensionDetail .detailWrap .detailWrapTop{width: 100%;height: 100px;background: rgba(255, 255, 255, 0.884);display: flex;}
+.content .suspensionDetail .detailWrap .detailWrapTop .detailWrapTopR{flex: 0 0 80px;margin: 10px 0 10px 13px;position: relative}
+.content .suspensionDetail .detailWrap .detailWrapTop .detailWrapTopR image{width: 80px;height: 80px;display: block;}
+
+.content .suspensionDetail .detailWrap .detailWrapTop .detailWrapTopR .coverImg{
+  position: absolute;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.308);top: 0;bottom: 0;right: 0;left: 0;margin: 0 auto
+  }
+.content .suspensionDetail .detailWrap .detailWrapTop .detailWrapTopR .coverImg img{display: block;}
+
+
+.content .suspensionDetail .detailWrap .detailWrapTop .detailWrapTopL{flex: 1;margin: 10px 16px 10px 16px;}
+.content .suspensionDetail .detailWrap .detailWrapTop .detailWrapTopL text{display: block}
+.content .suspensionDetail .detailWrap .detailWrapTop .detailWrapTopL .tit{font-size: 14px;height: 30px;line-height: 30px;}
+.content .suspensionDetail .detailWrap .detailWrapTop .detailWrapTopL .dec{font-size: 13px;height: 40px;margin: 5px 0 0 0;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;}
+.content .suspensionDetail .detailWrap .detailWrapBm{width: 100%;}
+.content .suspensionDetail .detailWrap .detailWrapBm .detailTime{width: 96%;height: 100%;margin: 0 auto}
+.content .suspensionDetail .detailWrap .detailWrapBm .detailTime text{display: block;width: 100%;padding: 6px 0}
+.content .suspensionDetail .detailWrap .detailWrapBm button{margin-top: 14px;}
+
+/* 打开详情弹框 */
+.showModelBtn{position: absolute;top: 9%;bottom: 0;right: 0;left: 0;margin:0 15px 0 auto;width: 40px;height: 40px;line-height: 42px;border-radius: 50%;background: red;color: #fff;font-size: 13px;text-align: center;}
+

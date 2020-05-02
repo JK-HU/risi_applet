@@ -1,0 +1,129 @@
+<!--components/me/me.wxml-->
+<view class="wrap">
+  <!-- 头部部分headWrap -->
+    <view class="headWrap">
+      <!-- 头部部分wrapContainer -->
+      <view class="wrapContainer">
+        <!-- 放头部的头像,昵称 -->
+        <view class="nicknamePic" bindtap="getUser">
+          
+            <view class="pics">
+              <image wx:if="{{userid == null}}" src="{{nologin}}" mode="cover"></image>
+              <image wx:if="{{userid !== null}}" src="{{userImg}}" mode="cover"></image>
+            </view>
+            <button 
+              wx:if="{{userid == null && canIUse}}"
+              open-type="getUserInfo" 
+              bindgetuserinfo="getUserInfo" 
+              class="web-font nologin">立即登录
+            </button>
+            <view class="usemsg" wx:if="{{userImg !== null}}">
+              <navigator url="/components/me/medetail/medetail" hover-class="none">
+                <view class="web-font usemsg_phone"> {{usename}} </view>
+                <view class="web-font usemsg_grade"> 普通会员 </view>
+              </navigator>
+            </view>
+        
+          <!-- <view class="usemsg" wx:if="{{userImg !== null}}">
+             <view class="web-font usemsg_phone">
+              17855345052
+            </view>
+            <view class="web-font usemsg_grade">
+              普通会员
+            </view>
+          </view> -->
+          
+
+          
+          
+        </view>
+        <!-- 放头部的头像,昵称结束 -->
+
+        <!-- 会员vip部分,可能需要先隐藏 -->
+        <!-- <view class="vips">
+          <view class="vips_l">
+            <image></image>
+            <text>会员权益</text>
+            <text class="text_block"></text>
+          </view>
+          <view class="vip_r">
+            <button>开通会员</button>
+          </view>
+        </view> -->
+        <!-- 会员vip部分,可能需要先隐藏结束 -->
+      </view>
+      <!-- 头部部分wrapContainer结束 -->
+    </view>
+    <!-- 头部部分headWrap结束 -->
+
+    <!-- 头部下面的栏目导航 -->
+    <view class="navs">
+      <view class="ul">
+
+        <block wx:for="{{bannerNav}}" wx:for-index="navIndex" wx:for-item="navItem">
+          <view class="li" data-type='{{navItem.type}}' bindtap="navTap">
+            
+              <image src="{{navItem.imgUrl}}"></image>
+              <text>{{navItem.title}}</text>
+            
+          </view>
+        </block>
+        
+        
+        <!-- <view class="li">
+         <navigator hover-class="none">
+          <image></image>
+          <text>订单查询</text>
+         </navigator>
+        </view>
+        <view class="li">
+         <navigator hover-class="none">
+          <image></image>
+          <text>积分商城</text>
+         </navigator>
+        </view>
+        <view class="li">
+         <navigator hover-class="none">
+          <image></image>
+          <text>我的权益</text>
+         </navigator>
+        </view> -->
+        
+      </view>
+    </view>
+    <!-- 头部下面的栏目导航结束 -->
+
+    <!-- 放一个广告图片 -->
+    <view class="Advertisement">
+      <!-- 轮播图 -->
+      <!-- <view class="bannerwrap">
+        <view class="banner">
+          <ab-banner class="banner" src="{{bannerList}}" current-title="{{bannerTitle}}" bindchange="bannerChanged" binditemtap="bannerItemTap" />
+        </view>
+      </view> -->
+      <!-- 轮播图结束 -->
+      <image src="{{bannerList[0].imgUrl}}"></image>
+    </view>
+    <!-- 放一个广告图片结束 -->
+
+  <!-- 头部部分wrap结束 -->
+
+  <!-- 底部设置 -->
+  <mp-cells>
+      <mp-cell link hover url="../index" value="设置" footer=" ">
+          <image slot="icon" src="{{icon}}" style="margin-right: 9px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </mp-cell>
+      <mp-cell link hover url="../index" value="联系客服" footer=" ">
+          <image slot="icon" src="{{icon1}}" style="margin-right: 9px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </mp-cell>
+      <!-- <mp-cell link url="../index" value="联系我们" footer=" ">
+          <image slot="icon" src="{{icon2}}" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </mp-cell> -->
+  </mp-cells>
+
+  <!-- 底部设置结束 -->
+
+
+
+
+</view>

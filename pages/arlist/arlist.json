@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mp-cells": "../../example/cells/cells",
+    "mp-cell": "../../example/cell/cell",
+    "mp-badge": "../../example/badge/badge"
+  }
+}

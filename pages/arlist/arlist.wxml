@@ -1,0 +1,21 @@
+<!--pages/arlist/arlist.wxml ar扫描list -->
+<view class="page">
+
+  <view class="card">
+    
+  </view>
+
+
+  <!-- <view class="page__bd">
+    <mp-cells title="扫描结果列表">
+      <mp-cell>
+          <view slot="title" style="position: relative;margin-right: 10px;">
+              <image src="" style="width: 50px; height: 50px; display: block;background-color:#eee"/>
+          </view>
+          <view>铭座大厦</view>
+          <view style="font-size: 13px;color: #888888;">三里街铭座大厦</view>
+      </mp-cell>
+      
+    </mp-cells>
+  </view> -->
+</view>

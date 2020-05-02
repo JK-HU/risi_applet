@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ab-banner": "../../example/abui/widgets/ab-banner/ab-banner",
+    "mp-cell": "../../example/cell/cell",
+    "mp-cells": "../../example/cells/cells"
+  }
+}

@@ -1,0 +1,2 @@
+/* components/me/browseRecord/browseRecord.wxss */
+.page__hd{padding: 20px;}

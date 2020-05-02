@@ -1,0 +1,19 @@
+<!--components/me/browseRecord/browseRecord.wxml 浏览记录 -->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">浏览记录</view>
+  </view>
+
+
+  <view class="page__bd">
+    <block wx:for="{{list}}" wx:for-item="item" wx:for-index="index">
+      <mp-cells>
+        <mp-cell value="{{item.spot_title}}" footer="{{item.create_time}}"></mp-cell>
+      </mp-cells>
+    </block>
+  </view>
+
+
+
+
+</view>

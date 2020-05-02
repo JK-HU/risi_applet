@@ -1,0 +1,45 @@
+/* components/me/me.wxss */
+@font-face {
+  font-family: 'webfont';
+  font-display: swap;
+  src: url('//at.alicdn.com/t/webfont_q5427levwr.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/webfont_q5427levwr.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/webfont_q5427levwr.woff2') format('woff2'),
+  url('//at.alicdn.com/t/webfont_q5427levwr.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/webfont_q5427levwr.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/webfont_q5427levwr.svg#Alibaba-PuHuiTi-Regular') format('svg'); /* iOS 4.1- */
+}
+.web-font{
+    font-family:"webfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.wrap{width: 100%;height: 100%;background-color: rgba(245, 245, 245, 0.842)}
+.wrap .headWrap{width: 100%;height: 83px;background: rgb(255,255,255)}
+.wrap .headWrap .wrapContainer{width: 86%;height: auto;margin: 0 auto}
+.wrap .headWrap .wrapContainer .nicknamePic{width: 80%;height: 80px;background: rgb(255,255,255);display: flex}
+/* 头部部分 */
+.nicknamePic .pics{flex: 0 0 60px;margin-right: 22px}
+.nicknamePic .pics image{width: 60px;height: 60px;background: #EEE;margin: 10px 5px 0 5px;border-radius: 50%;}
+.nicknamePic .usemsg{flex: 1;display: flex;flex-direction: column}
+.nicknamePic .usemsg .usemsg_phone{display: flex;align-items: center;flex: 1;font-size: 20px;margin-top: 10px}
+.nicknamePic .usemsg .usemsg_grade{display: flex;align-items: center;flex: 1;font-size: 11px;margin-bottom: 5px}
+.nicknamePic .nologin{display: flex;justify-content: center;padding: 0 20px;width:auto;min-height:36px;height: 36px !important;line-height:36px !important;margin: 22px 0 0 0;background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);border-radius: 20px;font-size: 13px}
+
+/* 栏目导航 */
+.navs{width: 100%;height: auto;}
+.navs .ul{width: 91%;height:100%;margin: 15px auto;display: flex;background-color: rgba(255, 255, 255, 0.842);border-radius: 5px}
+.navs .ul .li{flex: 1;text-align: center}
+.navs .ul .li {width: 100%;}
+.navs .ul .li  image{display: block;width: 39px;height: 39px;margin: 10px auto 5px auto}
+.navs .ul .li text{display: block;font-size: 12px;width: 100%;text-align: center;margin: 3px 0 3px 0}
+
+/* 广告图片 */
+.Advertisement{width: 90%;height: 100px;margin: 15px auto;border-radius: 5px;overflow: hidden}
+.Advertisement image{width: 100%;height: 100%;display: block;}
+
+/* 样式覆盖 */
+.weui-cell{padding: 13px 16px !important}
+.weui-cell__bd {font-size: 15px;}

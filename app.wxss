@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'webfont';
+  font-display: swap;
+  src: url('//at.alicdn.com/t/webfont_50hfwuqc6bx.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/webfont_50hfwuqc6bx.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/webfont_50hfwuqc6bx.woff2') format('woff2'),
+  url('//at.alicdn.com/t/webfont_50hfwuqc6bx.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/webfont_50hfwuqc6bx.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/webfont_50hfwuqc6bx.svg#AlibabaPuHuiTiL') format('svg'); /* iOS 4.1- */
+}
+
+@import '/style/weui.wxss';
+
+.web-font{
+  font-family:"webfont" !important;
+  font-size:14px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+page{
+    /* background-color: #FFF; */
+    font-size: 16px;
+    font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+.page__hd {
+    padding: 40px;
+}
+.page__bd {
+    padding-bottom: 40px;
+}
+.page__bd_spacing {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page__ft{
+    text-align: center;
+    padding:0 0 10px;
+    padding:0 0 calc(10px + constant(safe-area-inset-bottom));
+    padding:0 0 calc(10px + env(safe-area-inset-bottom));
+}
+
+
+.page__title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.page__desc {
+    margin-top: 5px;
+    color: #888888;
+    text-align: left;
+    font-size: 14px;
+}
+.weui-cell_example:before{
+    left:52px;
+}
+.clear{display: block;clear: both}

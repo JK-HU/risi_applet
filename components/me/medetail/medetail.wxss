@@ -1,0 +1,25 @@
+/* components/me/medetail/medetail.wxss */
+@import '/style/weui.wxss';
+
+/* 样式覆盖 */
+.weui-cell{padding: 11px 13px;}
+.getVerifi{
+  width: 89px;
+  background: #eee;
+  min-height: 30px;
+  font-size: 12px;
+  text-align: center;
+  padding: 0;
+  margin-top: 13px;
+  height: 30px;
+  line-height: 30px;
+  color:rgba(7,193,96);
+}
+.weui-vcode-btn{ 
+  color:rgba(7,193,96);
+  font-weight: 550;
+  font-size: 15px;
+}
+.weui-vcode-btn:active{color:rgb(2, 177, 87);}
+.vcode_verifi{height: 42px;line-height: 42px;}
+

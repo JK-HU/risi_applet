@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-cell": "../../../example/cell/cell",
+    "mp-cells": "../../../example/cells/cells"
+  }
+}

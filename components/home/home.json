@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ab-banner":"../../example/abui/widgets/ab-banner/ab-banner"
+  }
+}

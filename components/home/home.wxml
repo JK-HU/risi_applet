@@ -1,0 +1,137 @@
+<!--home/index/index.wxml 首页-->
+<view class="wrap">
+
+  <view class="tpwrap">
+  
+    <!-- 顶部背景 -->
+    <view class="tp_bg"></view>
+    <!-- 顶部背景结束 -->
+
+      <!-- 顶部部分 -->
+    <view class="search">
+      <!-- 搜索框 -->
+      <view class="search_wrap">
+        <view class="search_l">
+          <view class="wearch">
+            <image src="{{weatherIcon}}"></image>
+            <text class="web-font">{{weatherDegrees}}℃</text>
+          </view>
+          <view class="region">
+            <text class="web-font">合肥</text>
+            <!-- <image src="{{zkicon}}"></image> -->
+          </view>
+        </view>
+
+        <view class="search_r">
+          <image src="{{searicon}}"></image>
+          <input placeholder="请输入景区或目的地" ></input>
+        </view>    
+      </view>
+      <!-- 搜索框结束 -->
+    
+      <!-- 轮播图 -->
+      <view class="bannerwrap">
+        <view class="banner">
+          <ab-banner class="banner" src="{{bannerList}}" current-title="{{bannerTitle}}" bindchange="bannerChanged" binditemtap="bannerItemTap" />
+        </view>
+      </view>
+      <!-- 轮播图结束 -->
+    </view>
+  </view>
+  <!-- 顶部部分结束 -->
+
+  <!-- 四个导航 -->
+  <view class="navwrap">
+    <view class="navigats">
+      <block wx:for="{{navigatesList}}" wx:for-index="navIndex" wx:for-item="navitem">
+        <navigator url="{{navitem.url}}" open-type="navigate" hover-class="none" style="flex:1">
+          <view class="navev">  
+            <image src="{{navitem.pic}}"></image>
+          </view>
+          <text class="navtxt web-font">{{navitem.title}}</text>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <!-- 四个导航结束 -->
+
+  <!-- 当季热门 -->
+  <view class="hotnowwrap">
+    <text class="hottit beforeicon">当季热门地</text>
+    <view class="hotlist">
+
+      <navigator url="" open-type="navigate" hover-class="none">
+        <view class="lists">
+          <image src="https://shenpan.oss-cn-shanghai.aliyuncs.com/469/picture4.jpg"></image>
+          <text class="hot_name web-font">合肥</text>
+          <text class="hot_tag">创新高地</text>
+        </view>
+      </navigator>
+      <navigator url="" open-type="navigate" hover-class="none">
+        <view class="lists">
+          <image src="https://shenpan.oss-cn-shanghai.aliyuncs.com/469/picture4.jpg"></image>
+          <text class="hot_name web-font">合肥</text>
+          <text class="hot_tag">创新高地</text>
+        </view>
+      </navigator>
+      <navigator url="" open-type="navigate" hover-class="none">
+        <view class="lists">
+          <image src="https://shenpan.oss-cn-shanghai.aliyuncs.com/469/picture4.jpg"></image>
+          <text class="hot_name web-font">合肥</text>
+          <text class="hot_tag">创新高地</text>
+        </view>
+      </navigator>
+
+    </view>
+  </view>
+  <!-- 当季热门结束 -->
+
+  <!-- 热门景点 -->
+  <view class="scenicSpotwrap">
+    <view class="scenictitlewrap">
+      <text class="scen_title beforeicon">热门景点</text>
+      <view class="scenictBtn">
+        <button size="mini" class="scen_hot">更多</button>
+      </view>
+      <view class="clear"></view>
+    </view>
+    <!-- 内容 -->
+    <view class="scenic_con">
+      <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+          
+          <block wx:for="{{jdsize}}" wx:for-item="jdItem" wx:for-index='index'>
+            <view class="weui-panel__bd">
+
+              <view class="weui-media-box weui-media-box_appmsg" data-spid="{{jdItem.id}}" data-longitude='{{jdItem.longitude}}' data-latitude='{{jdItem.latitude}}' bindtap="toScenicDetail">
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                  <image class="weui-media-box__thumb" src="{{jdItem.picture[0]}}"/>
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                  <view class="weui-media-box__title web-font">{{jdItem.title}} <text class="sceniclevel" style="display:none">4A</text> </view>
+                  <view class="weui-media-box__desc">{{jdItem.description}}</view>
+                  <view class="fun_ico">
+                    <view class="con_l">
+                      <image src="{{jdejicon}}" />
+                      <text>{{jdItem.number}}人</text>
+                    </view>
+                    <view class="con_r"> 
+                      <image src="{{jdjl}}" />
+                      <text>{{jdItem.distance}}km</text> 
+                    </view>
+                    <view class="clear"></view>
+                  </view>
+                </view>
+              </view>
+                
+            </view>
+          </block>
+          
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <!-- 热门景点结束 -->
+
+</view>

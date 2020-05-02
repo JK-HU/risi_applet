@@ -1,0 +1,33 @@
+/* pages/new/new.wxss */
+.card{
+  position:absolute;
+  width:100%;
+  height:100%;
+  right:0;
+  left:0;
+  top:0;
+  bottom: 0;
+  background:rgba(0,0,0,0);
+  margin: 0 auto;
+  animation:showCard .3s ease-in-out;  
+}
+.card image{
+  width: 100%;height: 100%;display: block;
+  /* transform: rotate(90deg); */
+}
+
+@keyframes showCard{
+
+  0%{
+    opacity: 0;
+    transform: translateY(-400px);
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}

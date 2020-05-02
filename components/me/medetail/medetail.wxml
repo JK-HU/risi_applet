@@ -1,0 +1,58 @@
+<!--components/me/medetail/medetail.wxml-->
+<view class="page" style="height:{{height}}px;background-color:#eee">
+  <view class="page__bd">
+    <view style="margin-bottom:26px;">
+        <mp-cells title="">
+          <mp-cell>
+            
+              <view style="width:auto;">头像</view>
+              <block wx:if="{{sex == null}}">
+                <view slot="title" style="position: absolute;right:20px;top:3px;" >
+                  <image src="../../../style/images/nologin.png" style="width: 50px; height: 50px; display: block;border-radius:50%"/>
+                </view>
+              </block>
+              <block wx:if="{{sex !== null}}">
+                <view slot="title" style="position: absolute;right:20px;top:3px;" bindtap="uploadImg">
+                    <image src="{{tximg}}" style="width: 50px; height: 50px; display: block;border-radius:50%"/>
+                  </view>
+              </block>
+
+          </mp-cell>
+        </mp-cells>
+    </view>
+
+    <mp-form>
+      <mp-cells>
+        <mp-cell link>
+            <view style="display: inline-block; vertical-align: middle"><input value="{{nickname}}" bindinput="getname" /></view>
+        </mp-cell>
+        <mp-cell link>
+            <view style="display:block; vertical-align: middle;height:19px">
+              <picker bindchange="bindPickerChange" value="{{arrIndex}}" range="{{array}}" style="width:100%;height:35px;display:block">
+                <view class="picker">
+                  性别: {{array[arrIndex]}}
+                </view>
+              </picker>
+            </view>
+        </mp-cell>
+      </mp-cells>
+
+      <mp-cells>
+        <mp-cell prop="mobile" title="手机号" ext-class="weui-cell_vcode">
+          <input type="number" bindinput="getPhoneVlaue" placeholder-style="font-size:13px" class="weui-input" value="{{userPhone == null ? '' : userPhone}}" placeholder="请输入手机号用于绑定"/>
+          <view slot="footer" class="weui-vcode-btn" bindtap="getVerification"> 获取验证码</view>
+        </mp-cell>
+
+        <mp-cell title="验证码" ext-class=" weui-cell_vcode vcode_verifi" wx:if="{{verifiFlag == true}}">
+          <input type="number" bindinput="inputVerification" class="weui-input" placeholder-style="font-size:13px" style="width:142px" placeholder="请输入验证码"/>
+          <view slot="footer" bindtap="bindingPhone" class="weui-vcode-btn" style="border:none">立即绑定</view>
+        </mp-cell>
+      </mp-cells>
+    </mp-form>
+
+    <button bindtap="modifyBtn" style="margin-top:3rem">确认修改</button>
+    
+
+  </view>
+
+</view>

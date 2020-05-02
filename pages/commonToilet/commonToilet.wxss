@@ -1,0 +1,20 @@
+/* pages/commonToilet/commonToilet.wxss */
+
+.page-section-gap{
+  box-sizing: border-box;
+
+}
+
+.page-body-button {
+  margin-bottom: 30rpx;
+}
+/* 下面显示附近厕所的列表 */
+.toiletList{width: 100%;height: 280px;overflow: scroll;margin-top: 10px;}
+.toiletList .listevry{width: 90%;height: auto;display: flex;margin: 5px auto;padding-bottom: 6px;border-bottom: 1px solid rgb(211, 210, 210)}
+.toiletList .listevry .listevryl{flex: 1;font-size: 14px;}
+.toiletList .listevry .listevryl .xh{display: inline-block;font-size: 18px}
+.toiletList .listevry .listevryl .bt{display: inline-block;margin-left: 5px;font-size: 18px;}
+
+.toiletList .listevry .listevryl .jl{font-size: 12px;color: #999}
+.toiletList .listevry .listevryr{flex: 0 0 20px;text-align: center;line-height: 47px;width: 47px;height: 47px}
+.toiletList .listevry .listevryr image{width: 20px;height: 22px;margin-top: 15px;}

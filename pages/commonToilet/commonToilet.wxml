@@ -1,0 +1,30 @@
+<!--pages/commonToilet/commonToilet.wxml 公共厕所-->
+<view class="page-body">
+  <view class="page-section page-section-gap">
+    <map
+      id="myMap"
+      style="width: 100%; height: 300px;"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+     
+    >
+    </map>
+  </view>
+  <!-- 下面显示附近厕所的列表 -->
+  <view class="toiletList">
+    <block wx:for="{{toiletList}}" wx:for-item="item" wx:for-index="index">
+    
+      <view class="listevry">
+        <view class="listevryl">
+          <text class="xh">{{index + 1}}.</text>
+          <text class="bt">{{item.title}}</text>
+          <view class="jl">距离{{item.distance}}m</view>
+        </view>
+        <view class="listevryr"> <image src="/style/images/right_jt.png"></image> </view>
+      </view>
+
+    </block>
+  
+  </view>
+</view>

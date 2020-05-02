@@ -1,0 +1,104 @@
+/* components/home/home.wxss */
+@font-face {
+  font-family: 'webfont';
+  font-display: swap;
+  src: url('//at.alicdn.com/t/webfont_ed5z2bubz2.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/webfont_ed5z2bubz2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/webfont_ed5z2bubz2.woff2') format('woff2'),
+  url('//at.alicdn.com/t/webfont_ed5z2bubz2.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/webfont_ed5z2bubz2.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/webfont_ed5z2bubz2.svg#Alibaba-PuHuiTi-Regular') format('svg'); /* iOS 4.1- */
+}
+.web-font{
+    font-family:"webfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/***** 2020-4-9下午1511 *****/
+
+/* home/index/index.wxss 首页 */
+.wrap{width: 100%;height: 100%;position: relative;padding-bottom: 60px;overflow: hidden}
+.beforeicon::before{content: '';display: inline-block;width: 2px;height: 16px;background-image: linear-gradient( 135deg, rgb(181, 253, 207) 10%, #465EFB 100%);vertical-align: text-top;margin-right: 4px;margin-left: 3px}
+.tpwrap{width: 100%;height: auto;margin: 0 auto;}
+.tpwrap .tp_bg{position: absolute;top: 0;left: 0;width: 100%;height: 180px;
+/*background-color: #85A8E8; background-image: linear-gradient(120deg, #A7BFE8 0%, #6190E8 100%); */
+border-bottom-right-radius: 8px;border-bottom-left-radius: 8px;
+}
+
+/* 组件样式覆盖 */
+.weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon,.weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon>i,.weui-tabbar__item.weui-bar__item_on .weui-tabbar__label{color: #85A8E8 !important;}
+.weui-media-box__hd_in-appmsg{/*width: 70px;height: 70px;*/position: relative}
+.weui-media-box__hd_in-appmsg image{width: 80px;height: 80px;margin: 3px 7px 0 0;border-radius: 5px}
+.weui-panel__bd{border-bottom: 1px solid #eee}
+.weui-media-box__title .sceniclevel{display: inline-block;width: 30px;line-height: 1.4;font-size: 12px;color: #fff;border-radius: 3px;text-align: center;background: #85A8E8}
+
+/* 组件样式覆盖结束 */
+
+/* 搜索部分 */
+.tpwrap .search{width: 100%;height: auto;background: rgba(255, 255, 255, 0)}
+.tpwrap .search .search_wrap{width: 100%;height:87rpx;position: relative;background-color: #85A8E8}
+.tpwrap .search .search_wrap .search_l{position: absolute;top: 8px;left: 0;text-align: center;width: 120px;height: 31px;line-height: 31px;display: flex}
+.tpwrap .search .search_wrap .search_l .wearch{flex: 1;}
+.tpwrap .search .search_wrap .search_l .wearch image{width: 24px;height: 24px;vertical-align: middle;margin: 0 3px 3px 0;}
+.tpwrap .search .search_wrap .search_l .wearch text{font-size: 10px;color: #fff}
+.tpwrap .search .search_wrap .search_l .region{flex:1;}
+.tpwrap .search .search_wrap .search_l .region image{width: 17px;height: 17px;vertical-align: middle;margin-left: 1px}
+.tpwrap .search .search_wrap .search_l .region text{font-size: 14px;color: #fff}
+
+.tpwrap .search .search_wrap .search_r{width: 100%;height: 40px;box-sizing:border-box;padding: 9px 5px 0 130px;background: rgba(255, 255, 255, 0);position: relative}
+.tpwrap .search .search_wrap .search_r input{width: auto;height:100%;line-height: 80rpx;padding: 0 0 0 34px;background-color: rgba(255, 255, 255, 0.781); border-radius: 5px;font-size: 26rpx}
+.tpwrap .search .search_wrap .search_r image{width: 16px;height: 16px;display: inline-block;position: absolute;top: 50%;margin-top: -3px;padding-left: 10px;}
+
+/* 轮播图部分 */
+.tpwrap .bannerwrap{width: 95%;margin: 12rpx auto;border-radius: 5px !important;
+overflow: hidden;/*用于在轮播时显示直角*/
+}
+.tpwrap .banner { width: 100%;height: 362rpx;}
+.tpwrap .banner image{border-radius: 5px !important;}
+
+/* 中间导航 */
+.navwrap{width: 95%;height: auto;margin: 0 auto;}
+.navwrap .navigats{width: 100%;height: auto;background: #fff;display: flex;}
+.navwrap .navigats .navev{width:40px;height: 40px;text-align: center;margin: 11px auto 5px auto;position: relative}
+.navwrap .navigats .navev image{width: 37px;height: 37px;margin: auto;display: block;position: absolute;top: 0;right: 0;left: 0;bottom: 0;}
+.navwrap .navigats .navtxt{font-size: 14px;color: #000;flex: 1;display: block;text-align: center}
+
+/* 当季热门 */
+.hotnowwrap{width: 95%;height: auto;margin: 27px auto;}
+.hotnowwrap .hottit{display: block;margin: 0 0 10px 0;font-weight: bold}
+.hotnowwrap .hotlist{width: 100%;height: 128px;display: flex;}
+.hotnowwrap .hotlist navigator{flex:1;margin-right: 8px;}
+.hotnowwrap .hotlist navigator:last-child{margin-right: 0;}
+.hotnowwrap .hotlist navigator .lists{width: 100%;height: 100%;flex: 1;position: relative}
+.hotnowwrap .hotlist navigator .lists image{width: 100%;height: 100%;display: block}
+.hotnowwrap .hotlist navigator .lists .hot_name{position: absolute;left: 0;right:0;bottom: 28px;width: auto;line-height: 24px;font-size: 14px;color: #fff;text-align: center;}
+.hotnowwrap .hotlist navigator .lists .hot_tag{position: absolute;width: 84px;height:20px;line-height: 20px;text-align: center;display: block;font-size: 12px;color: #fff;right: 0;left: 0;bottom: 6px;margin: auto;background: rgba(255, 255, 255, 0.445);border-radius: 4px;overflow: hidden}
+
+/* 景点 */
+.scenicSpotwrap{width: 95%;height: auto;margin: 27px auto;}
+.scenicSpotwrap .scenictitlewrap{width: 100%;height: 36px;border-bottom: 1px solid #ececec} 
+.scenicSpotwrap .scenictitlewrap .scen_title{display: inline-block;margin: 6px 0 0 0;font-weight: bold;float: left}
+.scenicSpotwrap .scenictitlewrap .scenictBtn{display: inline-block;margin-top: 6px;float: right;} 
+.scenicSpotwrap .scenictitlewrap .scenictBtn button{display: inline-block;padding: 0 8px;font-size: 13px;margin-right: 6px;border: none;background: #FF9860;color: #FFF;line-height: 21px;}
+.scenicSpotwrap .scenictitlewrap .scenictBtn .scen_hot{} 
+.scenicSpotwrap .scenictitlewrap .scenictBtn .scen_jl{} 
+
+/* 内容区 */
+.scenicSpotwrap .scenic_con{width: 100%;height: 100%}
+.scenicSpotwrap .scenic_con .weui-media-box{padding: 10px 5px}
+.scenicSpotwrap .scenic_con .weui-media-box__desc{font-size: 13px;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2; overflow: hidden;padding: 0 2rpx;height: 75rpx;}
+
+.scenicSpotwrap .scenic_con .fun_ico{width: 100%;height: 20px;margin-top: 2px;}
+.scenicSpotwrap .scenic_con .fun_ico .con_l{width: 100px;height: 20px;line-height: 20px;float: left}
+.scenicSpotwrap .scenic_con .fun_ico .con_l image{width: 20px;height: 20px;}
+.scenicSpotwrap .scenic_con .fun_ico .con_l text{font-size: 12px;color: rgb(165, 163, 163);position: absolute;margin-top: 2px;}
+.scenicSpotwrap .scenic_con .fun_ico .con_r{width: 100px;height: 20px;line-height: 20px;text-align: center;float: right}
+.scenicSpotwrap .scenic_con .fun_ico .con_r image{width: 15px;height: 15px;margin-top: 4px;margin-right: 2px}
+.scenicSpotwrap .scenic_con .fun_ico .con_r text{font-size: 12px;color: rgb(165, 163, 163);position: absolute;margin-top: 2px;}
+
+.weui-media-box{position: relative;display: flex}
+.weui-media-box__hd{flex: 0 0 70px;}
+.weui-media-box__bd{flex: 1}
+/* 景点结束 */

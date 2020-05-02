@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/new/new",
+    "components/me/medetail/medetail",
+    "pages/user/user",
+    "pages/scenicDetail/scenicDetail",
+    "pages/commonToilet/commonToilet",
+    "components/me/browseRecord/browseRecord",
+    "pages/arlist/arlist",
+    "pages/login/login",
+    "pages/guideMap/guideMap"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "日思小程序",
+    "navigationBarBackgroundColor": "#85A8E8",
+    "backgroundColor": "#FFF"
+  },
+  "usingComponents": {
+    "mp-tabbar": "/example/tabbar/tabbar"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "style": "v2",
+  "debug": true,
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息将用于展示所在地区"
+    }
+  },
+  "requiredBackgroundModes": [
+    "location"
+  ]
+}
